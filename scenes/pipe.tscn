@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://l34jwq0bdvlm"]
+
+[ext_resource type="Script" uid="uid://vmw5680wuywa" path="res://scenes/Scripts/pipe.gd" id="1_arpqm"]
+[ext_resource type="Texture2D" uid="uid://chhyre8nx73oy" path="res://assets/Sprites/pipe1.png" id="2_8p0di"]
+[ext_resource type="Script" uid="uid://dtwendtcooyn1" path="res://scenes/Scripts/area_2d.gd" id="3_4ybk5"]
+[ext_resource type="Texture2D" uid="uid://6lp74iqcoiqa" path="res://assets/Sprites/pipe2.png" id="3_ejsh2"]
+[ext_resource type="Script" uid="uid://dn0fgkoao8m0h" path="res://scenes/Scripts/area_2d2.gd" id="5_4ybk5"]
+[ext_resource type="Script" uid="uid://bcot3rijgpaf" path="res://scenes/Scripts/scorearea.gd" id="6_tdldm"]
+[ext_resource type="AudioStream" uid="uid://bkue1gdmujlg2" path="res://assets/Sprites/pass.wav" id="7_ss4sx"]
+[ext_resource type="AudioStream" uid="uid://lqfn5rv8ttfm" path="res://assets/Sprites/hit.wav" id="8_xubdd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7364f"]
+size = Vector2(30, 202)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3reg2"]
+size = Vector2(23, 102)
+
+[node name="Pipe" type="Node2D" unique_id=604310951]
+script = ExtResource("1_arpqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2070826474]
+texture = ExtResource("2_8p0di")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=2025097654]
+collision_mask = 2
+script = ExtResource("3_4ybk5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1441589881]
+position = Vector2(1, 24)
+shape = SubResource("RectangleShape2D_7364f")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=715261262]
+position = Vector2(1, -231)
+texture = ExtResource("3_ejsh2")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D2" unique_id=1131079696]
+position = Vector2(10, -125)
+collision_mask = 2
+script = ExtResource("5_4ybk5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Area2D" unique_id=1054447564]
+position = Vector2(-9, 100)
+shape = SubResource("RectangleShape2D_7364f")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=876959847]
+
+[node name="Scorearea" type="Area2D" parent="." unique_id=1898588993]
+collision_mask = 2
+script = ExtResource("6_tdldm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scorearea" unique_id=674197762]
+position = Vector2(1.5, -114)
+shape = SubResource("RectangleShape2D_3reg2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Scorearea" unique_id=1020121212]
+position = Vector2(1.5, -114)
+stream = ExtResource("7_ss4sx")
+volume_db = 18.468
+
+[node name="colide" type="AudioStreamPlayer2D" parent="." unique_id=576379293]
+unique_name_in_owner = true
+stream = ExtResource("8_xubdd")
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="Sprite2D/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Sprite2D2/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Sprite2D2/Area2D" to="Sprite2D2/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Scorearea" to="Scorearea" method="_on_body_entered"]

@@ -1,0 +1,399 @@
+[gd_scene format=3 uid="uid://cidaid3nkap0i"]
+
+[ext_resource type="FontFile" uid="uid://3ws3e6hsol6c" path="res://assets/Fonts/PixelOperator8.ttf" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://bs2ibq0nlw1bd" path="res://scenes/Scripts/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Texture2D" uid="uid://bnviquid2f1cb" path="res://assets/Sprites/bg.png" id="2_oa1go"]
+[ext_resource type="FontFile" uid="uid://0gp1cukwghto" path="res://assets/Fonts/PixelOperator8-Bold.ttf" id="3_wu84c"]
+[ext_resource type="Script" uid="uid://d27j60b6paym4" path="res://scenes/buttonstart.gd" id="4_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://hu3wpmgrbrg5" path="res://assets/Sprites/bird fly.png" id="5_8ln24"]
+[ext_resource type="Script" uid="uid://def68vvdjfxtr" path="res://scenes/Scripts/button_exit.gd" id="6_5dd4i"]
+[ext_resource type="AudioStream" uid="uid://cym11asbh08rg" path="res://assets/Sprites/button click.wav" id="6_oa1go"]
+[ext_resource type="AudioStream" uid="uid://c8j0g5t1dr14k" path="res://assets/Sprites/button click 2.wav" id="7_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://cfkwa8uyjqv18" path="res://assets/Sprites/cartnewest.png" id="8_tbmy8"]
+[ext_resource type="Script" uid="uid://cn8u2bwm6cra7" path="res://scenes/Scripts/shop.gd" id="11_flqon"]
+[ext_resource type="AudioStream" uid="uid://bwt1w4u1od5ak" path="res://assets/Sprites/pageflip.wav" id="12_flqon"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7364f"]
+texture = ExtResource("2_oa1go")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odf66"]
+bg_color = Color(1, 0.95686275, 0.10980392, 1)
+border_width_bottom = 11
+border_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+bg_color = Color(1, 0.7647059, 0.10980392, 0.5921569)
+border_width_top = 9
+border_color = Color(0.14117648, 0.14117648, 0.14117648, 0)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
+bg_color = Color(0.8980392, 0.7529412, 0, 0.8117647)
+border_width_bottom = 11
+border_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wu84c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l4cgq"]
+
+[sub_resource type="Animation" id="Animation_flqon"]
+resource_name = "RESET"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(40, -0.25, 0, 0.25, 0, 40, -0.33333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(95, -0.25, 0, 0.25, 0, 122, -0.33333334, -4.5, 0, 0),
+"times": PackedFloat32Array(0, 2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_colors/font_color:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.33333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 2)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:theme_override_colors/font_color:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.76862746, -0.33333334, 0.03856209, 0, 0),
+"times": PackedFloat32Array(0, 2)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:theme_override_colors/font_color:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0.1764706, -0.25, 0, 0.25, 0, 0.1764706, -0.33333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 2)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:theme_override_colors/font_color:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.33333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 2)
+}
+
+[sub_resource type="Animation" id="Animation_rcqid"]
+resource_name = "RESTART"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ajci"]
+_data = {
+&"RESET": SubResource("Animation_flqon"),
+&"RESTART": SubResource("Animation_rcqid")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtw2f"]
+atlas = ExtResource("5_8ln24")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa1go"]
+atlas = ExtResource("5_8ln24")
+region = Rect2(30, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbmy8"]
+atlas = ExtResource("5_8ln24")
+region = Rect2(60, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jk1qb"]
+atlas = ExtResource("5_8ln24")
+region = Rect2(90, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dd4i"]
+atlas = ExtResource("5_8ln24")
+region = Rect2(120, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgwnu"]
+atlas = ExtResource("5_8ln24")
+region = Rect2(150, 0, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7364f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtw2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oa1go")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbmy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jk1qb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dd4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgwnu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="Animation" id="Animation_1ajci"]
+resource_name = "RESET"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/Button:theme_override_styles/normal")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/Button:theme_override_styles/normal:bg_color:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(1, 0, 0, 0.155, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.07, 2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/Button:theme_override_styles/normal:bg_color:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(0.95686275, 0, 0, 0.155, -0.018954247, 0.84313726, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.07, 2)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/Button:theme_override_styles/normal:bg_color:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(0.10980392, 0, 0, 0.155, 0, 0.10980392, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.07, 2)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/Button:theme_override_styles/normal:bg_color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(1, 0, 0, 0.155, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.07, 2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7b55j"]
+_data = {
+&"RESET": SubResource("Animation_1ajci")
+}
+
+[node name="Main Menu" type="Control" unique_id=484206191]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wu84c")
+
+[node name="Panel" type="Panel" parent="." unique_id=2123572445]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7364f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1430026665]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -332.0362
+offset_top = 84.0
+offset_right = 332.0362
+offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=35933418]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_odf66")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wu84c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rtw2f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wu84c")
+text = "Start Game"
+script = ExtResource("4_jk1qb")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/Button" unique_id=1651991808]
+stream = ExtResource("7_tbmy8")
+pitch_scale = 1.5
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=871786125]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_odf66")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wu84c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rtw2f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wu84c")
+text = "Exit"
+script = ExtResource("6_5dd4i")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/Button2" unique_id=574517353]
+stream = ExtResource("7_tbmy8")
+pitch_scale = 1.5
+
+[node name="Label" type="Label" parent="." unique_id=1290343878]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -536.0
+offset_top = -229.0
+offset_right = 536.0
+offset_bottom = -51.003815
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 0.1764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7058824)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 36
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("3_wu84c")
+theme_override_font_sizes/font_size = 128
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l4cgq")
+text = "Bird Game"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label" unique_id=1383354751]
+libraries/ = SubResource("AnimationLibrary_1ajci")
+autoplay = &"RESET"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1792281914]
+position = Vector2(572, 346)
+scale = Vector2(4.3333335, 4.133333)
+sprite_frames = SubResource("SpriteFrames_7364f")
+autoplay = "default"
+
+[node name="Start" type="AudioStreamPlayer2D" parent="." unique_id=906751438]
+stream = ExtResource("6_oa1go")
+
+[node name="Exit" type="AudioStreamPlayer2D" parent="." unique_id=1446122530]
+stream = ExtResource("7_tbmy8")
+
+[node name="shop" type="Button" parent="." unique_id=632582308]
+layout_mode = 0
+offset_left = 1045.0
+offset_top = 549.0
+offset_right = 1131.0
+offset_bottom = 639.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_odf66")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wu84c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rtw2f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wu84c")
+icon = ExtResource("8_tbmy8")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("11_flqon")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="shop" unique_id=670479041]
+stream = ExtResource("12_flqon")
+volume_db = 18.468
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1488356568]
+libraries/ = SubResource("AnimationLibrary_7b55j")
+autoplay = &"RESET"
+
+[connection signal="mouse_entered" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Button2" to="VBoxContainer/Button2" method="_on_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="shop" to="shop" method="_on_pressed"]

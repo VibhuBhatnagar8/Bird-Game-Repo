@@ -1,0 +1,275 @@
+[gd_scene format=3 uid="uid://bxmv0lbwr00qa"]
+
+[ext_resource type="FontFile" uid="uid://3ws3e6hsol6c" path="res://assets/Fonts/PixelOperator8.ttf" id="1_5p55f"]
+[ext_resource type="Script" uid="uid://276ug50nqcao" path="res://scenes/Scripts/control.gd" id="1_8n18e"]
+[ext_resource type="Texture2D" uid="uid://df6v6x3rp231x" path="res://assets/Sprites/Screenshot 2026-10-02 152456.png" id="2_r67kn"]
+[ext_resource type="Texture2D" uid="uid://ffl7pqak6e7h" path="res://assets/Sprites/Screenshot 2026-10-02 152554.png" id="3_tjwpk"]
+[ext_resource type="Script" uid="uid://pso7c64kcqvy" path="res://scenes/Scripts/button.gd" id="5_tjwpk"]
+[ext_resource type="Script" uid="uid://cvvhwjskogo2j" path="res://scenes/Scripts/button_2.gd" id="6_lpubu"]
+[ext_resource type="Texture2D" uid="uid://cptiwf2i50kt5" path="res://assets/Sprites/blackarrow.png" id="8_1p5nq"]
+[ext_resource type="AudioStream" uid="uid://c8j0g5t1dr14k" path="res://assets/Sprites/button click 2.wav" id="8_hob4j"]
+[ext_resource type="Script" uid="uid://be4tpisk3njwe" path="res://scenes/Scripts/shopping.gd" id="9_01bab"]
+[ext_resource type="AudioStream" uid="uid://dw7blcqgxeyu2" path="res://assets/Sprites/flip.wav" id="10_01bab"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3reg2"]
+texture = ExtResource("2_r67kn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7364f"]
+texture = ExtResource("3_tjwpk")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r67kn"]
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 11
+border_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brbbq"]
+bg_color = Color(0.40932173, 0.8943228, 0.15928948, 0.5921569)
+border_width_top = 9
+border_color = Color(0.14117648, 0.14117648, 0.14117648, 0)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8n18e"]
+bg_color = Color(0.2354213, 0.87553704, 0.4699906, 0.8117647)
+border_width_bottom = 11
+border_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjwpk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpubu"]
+bg_color = Color(1, 0.40392157, 1, 1)
+border_width_bottom = 11
+border_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lt2xq"]
+bg_color = Color(1, 0.5254902, 0.8039216, 0.5921569)
+border_width_top = 9
+border_color = Color(0.14117648, 0.14117648, 0.14117648, 0)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1p5nq"]
+bg_color = Color(3.5629182, 1.3439552, 2.5408502, 0.84313726)
+border_width_bottom = 11
+border_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hob4j"]
+
+[sub_resource type="Gradient" id="Gradient_8n18e"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7364f"]
+gradient = SubResource("Gradient_8n18e")
+fill = 1
+fill_from = Vector2(0.4826087, 0.5304348)
+fill_to = Vector2(0.75652176, 0.22608696)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hob4j"]
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 11
+border_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_01bab"]
+bg_color = Color(1, 1, 1, 0.5921569)
+border_width_top = 9
+border_color = Color(0.14117648, 0.14117648, 0.14117648, 0)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exs80"]
+bg_color = Color(1, 1, 1, 0.42745098)
+border_width_bottom = 11
+border_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kql7n"]
+
+[node name="Control" type="Control" unique_id=1840905088]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8n18e")
+
+[node name="Panel" type="Panel" parent="." unique_id=546622072]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 571.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3reg2")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1728067459]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -581.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7364f")
+
+[node name="Button" type="Button" parent="." unique_id=1365905239]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 97.0
+offset_top = -34.5
+offset_right = 450.0
+offset_bottom = 34.5
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_5p55f")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_r67kn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_brbbq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8n18e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tjwpk")
+text = "Day"
+script = ExtResource("5_tjwpk")
+
+[node name="nighthover" type="AudioStreamPlayer2D" parent="Button" unique_id=1783138821]
+position = Vector2(-721, -289.5)
+stream = ExtResource("8_hob4j")
+pitch_scale = 1.93
+
+[node name="Button2" type="Button" parent="." unique_id=542234821]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -431.0
+offset_top = -34.5
+offset_right = -94.0
+offset_bottom = 34.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5p55f")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_lpubu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lt2xq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1p5nq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hob4j")
+text = "Night"
+script = ExtResource("6_lpubu")
+
+[node name="nighthover" type="AudioStreamPlayer2D" parent="Button2" unique_id=1360754316]
+position = Vector2(-721, -289.5)
+stream = ExtResource("8_hob4j")
+pitch_scale = 1.93
+
+[node name="nightlight" type="DirectionalLight2D" parent="." unique_id=292760956]
+unique_name_in_owner = true
+color = Color(0, 0, 0, 1)
+blend_mode = 1
+
+[node name="nightpoint" type="PointLight2D" parent="." unique_id=1202724526]
+unique_name_in_owner = true
+position = Vector2(910, 322)
+scale = Vector2(5.3906245, 4.4062505)
+enabled = false
+energy = 2.64
+texture = SubResource("GradientTexture2D_7364f")
+
+[node name="nightpoint2" type="PointLight2D" parent="." unique_id=1152683035]
+unique_name_in_owner = true
+position = Vector2(277, 315)
+scale = Vector2(5.3906245, 4.4062505)
+energy = 0.69
+texture = SubResource("GradientTexture2D_7364f")
+
+[node name="Day" type="AudioStreamPlayer2D" parent="." unique_id=671833728]
+stream = ExtResource("8_hob4j")
+
+[node name="Night" type="AudioStreamPlayer2D" parent="." unique_id=1307116986]
+stream = ExtResource("8_hob4j")
+
+[node name="shop" type="Button" parent="." unique_id=1186062876]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 29.0
+offset_right = 103.0
+offset_bottom = 103.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_5p55f")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_hob4j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_01bab")
+theme_override_styles/hover = SubResource("StyleBoxFlat_exs80")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kql7n")
+icon = ExtResource("8_1p5nq")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("9_01bab")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="shop" unique_id=1080927031]
+stream = ExtResource("10_01bab")
+volume_db = 14.579
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Button2" to="Button2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button2" to="Button2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="shop" to="shop" method="_on_pressed"]

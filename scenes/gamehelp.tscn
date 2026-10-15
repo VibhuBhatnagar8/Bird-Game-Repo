@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b6bo64f0mbdfa"]
+
+[ext_resource type="Script" uid="uid://ch0g0qhkso7fs" path="res://scenes/Scripts/gamehelp.gd" id="1_f4uni"]
+[ext_resource type="AudioStream" uid="uid://clkrqer0f5mhx" path="res://assets/Sprites/hitnew.wav" id="2_xk6sb"]
+
+[node name="Gamehelp" type="Node" unique_id=88339767]
+script = ExtResource("1_f4uni")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=812305288]
+stream = ExtResource("2_xk6sb")
